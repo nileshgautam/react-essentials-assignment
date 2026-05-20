@@ -1,0 +1,12 @@
+body {
+  background: #eceff3;
+  font-family: sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: aliceblue !;
+}

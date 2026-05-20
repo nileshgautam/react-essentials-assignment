@@ -1,0 +1,33 @@
+.portfolio-card-footer button {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 3rem;
+    background: none;
+    font-size: .95rem;
+}
+
+.contact-btn {
+    background: #4f46e5 !important;
+    color: white;
+}
+
+.theme-shitch button {
+    float: left;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.portfolio-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem .25rem;
+}
+
+.navigator-span {
+    margin: 0 1rem;
+}

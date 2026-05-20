@@ -1,0 +1,8 @@
+.main .bio {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: gray;
+    line-height: 1.5;
+    font-weight: 600;
+}
