@@ -1,0 +1,185 @@
+/* =========================
+   MOVIE CARD
+========================= */
+
+.movie-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+
+    border-radius: 16px;
+
+    background: #eef2ff;
+
+    border: 1px solid #dbe4ff;
+
+    transition: all 0.25s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.movie-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+    flex: 1;
+}
+
+/* =========================
+   TITLE ROW
+========================= */
+
+.movie-title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.year,
+.genre {
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    color: #9ca3af;
+}
+
+/* =========================
+   TAG SECTION
+========================= */
+
+.movie-info-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+}
+
+/* =========================
+   RATING BADGE
+========================= */
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.35rem 0.8rem;
+
+    border-radius: 20px;
+
+    background: #ffb703;
+
+    color: #111827;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+/* =========================
+   MOVIE TAG
+========================= */
+
+.movie-tag {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.movie-tag:hover {
+    background: #6366f1;
+    color: white;
+}
+
+/* =========================
+   FAVORITE BUTTON
+========================= */
+
+.right button {
+    border: none;
+    outline: none;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.right .favorited {
+    background: #e6004c;
+    color: #ffffff;
+}
+
+.right button:hover {
+    transform: scale(1.03);
+
+    background: #e6004c;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .movie-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1rem;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right button {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.clickable:hover {
+    transform: scale(1.05);
+
+    opacity: 0.85;
+}
