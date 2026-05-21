@@ -8,7 +8,7 @@ function ThemeToggle({ darkMode, setDarkMode }) {
                 className="theme-btn"
                 onClick={() => setDarkMode(!darkMode)}
             >
-                {darkMode ? "☀ Toggle Theme" : "🌙 Toggle Theme"}
+                {darkMode ? "🌙 Toggle Theme" : "☀  Toggle Theme"}
             </button>
         </div>
     );
