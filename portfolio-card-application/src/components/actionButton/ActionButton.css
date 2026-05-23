@@ -3,9 +3,9 @@
     padding: 10px 14px;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 3rem;
     background: none;
     font-size: .95rem;
+    margin: 0.5rem 0;
 }
 
 .contact-btn {
@@ -25,9 +25,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .5rem .25rem;
+    margin: 1.5rem .25rem 0 .25rem;
 }
 
 .navigator-span {
     margin: 0 1rem;
+}
+
+.portfolio-navigator {
+    border-radius: 7px;
+    color: #333;
+    text-align: center;
+    padding: .5rem 0;
+    margin: .5rem 0;
+}
+
+.portfolio-navigator span {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: none;
+    font-size: .95rem;
+    margin: 0.5rem 0;
+}
+
+@media(max-width:768px) {
+
+    .portfolio-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-card-footer button {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .portfolio-navigator {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 .5rem;
+    }
+
+    /* .portfolio-navigator button {
+        text-align: center;
+    } */
 }

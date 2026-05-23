@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import "./PortfolioCard.css";
 
 import ThemeToggle from "../themeToggle/ThemeToggle";
-import Avatar from "../avatar/Avatar";
-import Bio from "../bio/Bio";
-import Skills from "../skills/Skills";
 import ActionButton from "../actionButton/Acationbutton";
 
 function PortfolioCard({ profiles }) {
@@ -35,16 +32,40 @@ function PortfolioCard({ profiles }) {
 
             <div className={`portfolio-card ${darkMode ? "dark" : ""}`}>
 
-                <Avatar
-                    image={profile.image}
-                    name={profile.name}
-                    designation={profile.title}
-                />
+                <header className="portfolio-card-header">
 
-                <Bio bio={profile.bio} />
+                    <div className="avatar-container">
+                        <img src={profile.image} alt={name} />
+                    </div>
 
-                <Skills skills={profile.skills} />
+                    <div className="name-container">
+                        <h1 className="name">{profile.name}</h1>
+                        <p className="designation">{profile.designation}</p>
+                    </div>
 
+                </header>
+
+                {/* Bio section */}
+
+                <div className="main">
+                    <div className="bio">
+                        {profile.bio}
+                    </div>
+                </div>
+
+                {/* Skills section */}
+
+                <div className="skill-main">
+                    <h5>Skills</h5>
+                    <div className="skills-container">
+                        {profile.skills.map((skill, index) => (
+                            <span className="skill-tag" key={index}>{skill}</span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Action  section*/}
+                
                 <ActionButton
                     likes={likes}
                     setLikes={setLikes}

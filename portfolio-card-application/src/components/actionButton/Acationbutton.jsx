@@ -1,5 +1,8 @@
 import React from "react";
 import "./ActionButton.css";
+import { FaAngleLeft, FaAngleRight, FaMoon, FaSun, FaHeart } from "react-icons/fa";
+
+
 
 function ActionButton({
     likes,
@@ -16,30 +19,42 @@ function ActionButton({
         <div className="portfolio-card-footer">
 
             <button onClick={toggleTheme}>
-                {darkMode ? "☀ Light" : "🌙 Dark"}
+                {darkMode ? (
+                    <>
+                        <FaMoon /> <span> Light</span>
+                    </>
+
+
+                ) : (
+
+                    <>
+                        <FaSun /> <span> Dark</span>
+                    </>
+                )}
             </button>
 
             <div className="portfolio-navigator">
 
-                <button onClick={prevProfile}> ❮</button>
-                <button onClick={nextProfile}> ❯ </button>
+                <span onClick={prevProfile}> <FaAngleLeft /></span>
+                <span onClick={nextProfile}> <FaAngleRight /> </span>
                 <span className="navigator-span">
                     {currentProfile + 1} / {totalProfiles}
                 </span>
             </div>
 
             <button onClick={() => setLikes(likes + 1)}>
-                ❤️ {likes}
+                <FaHeart />
+                <span> {likes}</span>
             </button>
 
             <button
                 className="contact-btn"
                 onClick={() => alert("Contact feature coming soon!")}
             >
-                ✉️ Contact
+                Contact
             </button>
 
-        </div>
+        </div >
     );
 }
 
