@@ -1,52 +1,32 @@
-/* =========================
-   MOVIE CARD
-========================= */
-
-.movie-card {
+.minimovie-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem 1.2rem;
     margin-bottom: 1rem;
-
-    border-radius: 16px;
-
+    border-radius: 1rem;
     background: #eef2ff;
-
-    border: 1px solid #dbe4ff;
-
-    transition: all 0.25s ease;
+    border: 1px solid #dbe3ff;
 }
 
-.movie-card:hover {
+.minimovie-card:hover {
     transform: translateY(-2px);
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
 
-.movie-card-header {
+.minimovie-card-header {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
-
+    gap: .7rem;
     flex: 1;
 }
 
-/* =========================
-   TITLE ROW
-========================= */
-
-.movie-title-row {
+.minimovie-title-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    gap: 0.5rem;
+    gap: .5rem;
 }
 
 .title {
@@ -57,129 +37,92 @@
 }
 
 .year,
-.genre {
+.gener {
     font-size: 0.95rem;
     font-weight: 500;
-
     color: #9ca3af;
 }
 
-/* =========================
-   TAG SECTION
-========================= */
-
-.movie-info-row {
+.minimovie-info-row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    gap: 0.5rem;
+    gap: .5rem;
 }
-
-/* =========================
-   RATING BADGE
-========================= */
 
 .rating {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0.35rem 0.8rem;
-
     border-radius: 20px;
-
     background: #ffb703;
-
     color: #111827;
-
     font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-
 }
 
-/* =========================
-   MOVIE TAG
-========================= */
-
-.movie-tag {
+.minimovie-tag {
     padding: 0.35rem 0.75rem;
     border-radius: 20px;
     background: #ffffff;
     color: #4b5563;
-    font-size: 0.85rem;
+    font-size: .85rem;
     font-weight: 500;
     border: 1px solid #e5e7eb;
     transition: 0.2s ease;
     cursor: pointer;
 }
 
-.movie-tag:hover {
+.minimovie-tag:hover {
     background: #6366f1;
     color: white;
 }
-
-/* =========================
-   FAVORITE BUTTON
-========================= */
 
 .right button {
     border: none;
     outline: none;
     padding: 0.7rem 1rem;
     border-radius: 12px;
-    cursor: pointer;
-    font-size: 0.95rem;
+    font-size: .95rem;
     font-weight: 700;
     transition: all 0.25s ease;
 }
 
 .right .favorited {
     background: #e6004c;
-    color: #ffffff;
+    color: #fff;
 }
 
 .right button:hover {
     transform: scale(1.03);
-
     background: #e6004c;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .movie-card {
+@media (max-width:768px) {
+    .minimovie-card {
         flex-direction: column;
         align-items: flex-start;
-
         gap: 1rem;
     }
 
-    .right {
-        width: 100%;
-    }
-
+    .right,
     .right button {
         width: 100%;
     }
 
     .title {
-        font-size: 1.1rem;
+        font-size: 1.25rem;
     }
 }
 
 .clickable {
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
 .clickable:hover {
     transform: scale(1.05);
-
     opacity: 0.85;
 }

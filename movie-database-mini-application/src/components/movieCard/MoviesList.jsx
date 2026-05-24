@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import './MovieCard.css';
-import { FaHeart, FaRegHeart, FaRedo } from "react-icons/fa";
+import './MoviesList.css';
+import { FaHeart, FaRegHeart, FaRedo, FaStar } from "react-icons/fa";
 
-function MovieCard(
-    {
+function MoviesList(params) {
+    const [favorite, setFavorite] = useState(false);
+    const {
         id,
         title,
         year,
@@ -15,15 +16,14 @@ function MovieCard(
         setSelectedYear,
         setSelectedTag
 
-    }) {
-    const [favorite, setFavorite] = useState(false);
+    } = params;
 
     return (
-        <div className="movie-card">
+        <div className="minimovie-card">
 
-            <div className="movie-card-header">
+            <div className="minimovie-card-header">
 
-                <div className="movie-title-row">
+                <div className="minimovie-title-row">
                     <h6 className="title">{title}</h6>
                     <span
                         className="year clickable"
@@ -37,13 +37,13 @@ function MovieCard(
                         • {genre}
                     </span>                </div>
 
-                <div className="movie-info-row">
+                <div className="minimovie-info-row">
 
-                    <span className="rating">⭐ {rating}</span>
+                    <span className="rating"> <FaStar />{rating}</span>
 
                     {tags?.map((tag, index) => (
                         <span
-                            className="movie-tag clickable"
+                            className="minimovie-tag clickable"
                             key={index}
                             onClick={() => setSelectedTag(tag)}
                         >                            {tag}
@@ -54,14 +54,14 @@ function MovieCard(
             </div>
 
             <div className="right">
-                <button onClick={() => toggleFavorite(id)} className={isFavorite ? "♡ favorited" : "favorite"}>
+                <button onClick={() => toggleFavorite(id)} className={isFavorite ? "favorited" : "favorite"}>
                     <FaRegHeart /> {isFavorite ? "Favorited" : "Favorite"}
                 </button>
             </div>
 
-        </div>
+        </div >
     )
 
 }
 
-export default MovieCard;
+export default MoviesList;

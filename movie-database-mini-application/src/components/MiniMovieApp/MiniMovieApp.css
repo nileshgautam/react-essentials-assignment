@@ -1,10 +1,11 @@
 .card-container {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
-    text-align: end;
+    min-height: 100vh;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg,
+            #eef2ff 0%,
+            #f8fafc 100%);
+    font-family: Inter, sans-serif;
 }
-
 
 .app-card {
     width: 80vw;
@@ -29,13 +30,15 @@
     color: white !important;
 }
 
-.dark .bio,
+.dark .dark .bio,
 .dark .name-container h1,
 .dark .skill-main h3,
 .dark .designation,
 .dark .skill-tag,
 .dark h1,
-.dark .title {
+.dark .title,
+.dark .movie-favorite-movie-list h3,
+.dark .app-card-movie-favorite-movie-list h3 {
     color: white !important;
 }
 
@@ -75,48 +78,6 @@
     padding: 0.5rem 1rem;
 }
 
-
-/* =========================
-   PAGE CONTAINER
-========================= */
-
-.card-container {
-    min-height: 100vh;
-
-    padding: 2rem;
-
-    background: linear-gradient(135deg,
-            #eef2ff 0%,
-            #f8fafc 100%);
-
-    font-family: Inter, sans-serif;
-}
-
-/* =========================
-   MAIN APP CARD
-========================= */
-
-.app-card {
-    max-width: 1400px;
-
-    margin: 2rem auto;
-
-    padding: 2rem;
-
-    border-radius: 24px;
-
-    background: white;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.05);
-
-    transition: 0.3s ease;
-}
-
-/* =========================
-   DARK MODE
-========================= */
-
 .app-card.dark {
     background: #111827;
     color: white;
@@ -131,10 +92,6 @@
     color: white;
     border-color: #374151;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .app-card-header {
     display: flex;
@@ -167,45 +124,41 @@
     color: #9ca3af;
 }
 
-/* =========================
-   SEARCH BAR
-========================= */
-
 .app-search-bar {
     display: flex;
     align-items: center;
     gap: 1rem;
-
     margin-bottom: 1rem;
 }
 
-.app-search-bar input {
-    flex: 1;
+.search-box {
+    position: relative;
+    width: 100%;
+}
 
-    height: 54px;
-
-    padding: 0 1rem;
-
-    border-radius: 14px;
-
-    border: 1px solid #d1d5db;
-
+.search-box input {
+    width: 90%;
+    padding: .5rem 0.5rem .5rem 1.5rem;
+    border-radius: 10px;
     font-size: 1rem;
-
     outline: none;
-
+    border: 1px solid #d1d5db;
     transition: 0.25s ease;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 35%;
+    transform: translate(-50%);
+    font-size: .75rem;
 }
 
 .app-search-bar input:focus {
     border-color: #6366f1;
-
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
 }
 
-/* =========================
-   BUTTONS
-========================= */
 
 .clear-btn,
 .rest-btn {
@@ -226,8 +179,6 @@
     transition: 0.25s ease;
 }
 
-/* clear */
-
 .clear-btn {
     background: #f3f4f6;
     color: #374151;
@@ -236,8 +187,6 @@
 .clear-btn:hover {
     background: #e5e7eb;
 }
-
-/* reset */
 
 .rest-btn {
     background: #4f46e5;
@@ -248,92 +197,45 @@
     background: #4338ca;
 }
 
-/* =========================
-   SEARCH RESULT TEXT
-========================= */
-
 .search-result-text {
     margin-bottom: 1.5rem;
-
     color: #9ca3af;
-
     font-weight: 600;
 }
-
-/* =========================
-   MAIN CONTENT GRID
-========================= */
 
 .app-card-main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 2rem;
-
     align-items: start;
 }
-
-/* =========================
-   MOVIE LIST
-========================= */
 
 .app-card-movie-list h3,
 .app-card-movie-favorite-movie-list h3 {
     margin-bottom: 1.2rem;
-
     font-size: 1.4rem;
     font-weight: 700;
-
-    color: #111827;
 }
 
-/* =========================
-   FAVORITE SECTION
-========================= */
-
 .app-card-movie-favorite-movie-list {
-    /* padding: 1.2rem; */
-
     border-radius: 18px;
-
-    /* background: #f8fafc; */
-
-    /* border: 1px solid #e5e7eb; */
-
     min-height: 300px;
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
-
 .empty-state {
     padding: 2rem;
-
     text-align: center;
-
     color: #9ca3af;
-
     font-weight: 600;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 992px) {
-
     .app-card-main-container {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-
-    .card-container {
-        padding: 1rem;
-    }
-
     .app-card {
         padding: 1.2rem;
     }
@@ -349,7 +251,6 @@
 
     .app-search-bar {
         flex-direction: column;
-        align-items: stretch;
     }
 
     .clear-btn,
@@ -361,9 +262,7 @@
 .app-card-main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     gap: 2rem;
-
     align-items: stretch;
 }
 
@@ -372,27 +271,10 @@
     width: 100%;
 }
 
-/* Section Heading */
-
-.app-card-movie-list h3,
-.app-card-movie-favorite-movie-list h3 {
-    margin: 0 0 1rem 0;
-
-    font-size: 1.4rem;
-    font-weight: 700;
-
-    color: #111827;
-
-    line-height: 1.2;
-}
-
 .app-card-main-container {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 2rem;
-
     align-items: start;
 }
 
@@ -401,39 +283,43 @@
     gap: 1rem;
 }
 
-.app-card-movie-list,
-.app-card-movie-favorite-movie-list {
-
+.movies-list,
+.favorite-grid {
     min-height: 450px;
     max-height: 450px;
-
     overflow-y: auto;
-
     padding-right: 0.5rem;
 }
 
-/* Custom Scrollbar */
-
-.app-card-movie-list::-webkit-scrollbar,
-.app-card-movie-favorite-movie-list::-webkit-scrollbar {
+.movies-list::-webkit-scrollbar,
+.favorite-grid::-webkit-scrollbar {
     width: 8px;
 }
 
-.app-card-movie-list::-webkit-scrollbar-track,
-.app-card-movie-favorite-movie-list::-webkit-scrollbar-track {
+.movies-list::-webkit-scrollbar-track,
+.favorite-grid::-webkit-scrollbar-track {
     background: #eef2ff;
 
     border-radius: 10px;
 }
 
-.app-card-movie-list::-webkit-scrollbar-thumb,
-.app-card-movie-favorite-movie-list::-webkit-scrollbar-thumb {
+.movies-list::-webkit-scrollbar-thumb,
+.favorite-grid::-webkit-scrollbar-thumb {
     background: #c7d2fe;
 
     border-radius: 10px;
 }
 
-.app-card-movie-list::-webkit-scrollbar-thumb:hover,
-.app-card-movie-favorite-movie-list::-webkit-scrollbar-thumb:hover {
+.movies-list::-webkit-scrollbar-thumb:hover,
+.favorite-grid::-webkit-scrollbar-thumb:hover {
     background: #818cf8;
+}
+
+@media (max-width:768px) {
+
+
+    .app-card-main-container {
+        display: flex;
+        flex-direction: column;
+    }
 }

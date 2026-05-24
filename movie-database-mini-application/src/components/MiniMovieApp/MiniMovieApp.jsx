@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./MiniMovieApp.css";
-import {FaRedo } from "react-icons/fa";
+import { FaRedo, FaTimes, FaSearch } from "react-icons/fa";
 
 
 
 import ThemeToggle from "../themeToggle/ThemeToggle";
-import MovieCard from "../movieCard/MovieCard";
+import MovieCard from "../movieCard/MoviesList";
 import FavoriteList from "../FavoriteList/FavoriteList";
 
 function MiniMovieApp({ movies }) {
@@ -105,7 +105,7 @@ function MiniMovieApp({ movies }) {
         setSortBy("title");
     }
     return (
-        <div className="card-container">
+        <div className="card-container" >
 
             <ThemeToggle
                 darkMode={darkMode}
@@ -119,22 +119,26 @@ function MiniMovieApp({ movies }) {
                         <h1>Movie Explorer</h1>
                         <p>Search, Filter, and Favorite movies, Designed for a single page React component structure.</p>
                     </div>
-                    <div className="header-subtitle">
-                        Load data: React state ready
-                    </div>
                 </header>
 
                 <div className="app-search-bar">
+                    <div className="search-box">
+                        <FaSearch className="search-icon" />
+                        <input
+                            type="text"
+                            placeholder='Search movies (e.g. "Interstellar","Star")'
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
 
-                    <input type="text"
-                        placeholder='Search movies (e.g. "Interstellar","Star")'
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                    />
+
+                    </div>
                     {/* Clear search all button */}
                     <button className="clear-btn"
                         onClick={() => setSearchTerm('')}
-                    >X</button>
+                    ><FaTimes />
+                    </button>
+
                     {/* reset button */}
                     <button className="rest-btn"
                         onClick={restFilter}
@@ -171,7 +175,7 @@ function MiniMovieApp({ movies }) {
                     {selectedTag && (
                         <span>
                             Tag: {selectedTag} , {filteredMoviesCount} result
-                            {filteredMoviesCount !== 1 ? "s" : ""} 
+                            {filteredMoviesCount !== 1 ? "s" : ""}
                         </span>
                     )}
 
@@ -179,26 +183,31 @@ function MiniMovieApp({ movies }) {
 
                 <div className="app-card-main-container">
                     <div className="app-card-movie-list">
-                        <h3>Matching Movies</h3>
-                        {filteredMovies && filteredMovies.map((movie, index) => (
+                        <div>
+                            <h3>Matching Movies</h3>
+                        </div>
+                        <div className="movies-list">
 
-                            <MovieCard
-                                key={movie.id}
-                                id={movie.id}
-                                title={movie.title}
-                                year={movie.year}
-                                genre={movie.genre}
-                                rating={movie.rating}
-                                tags={movie.tags}
-                                isFavorite={movie.favorite}
-                                toggleFavorite={toggleFavorite}
+                            {filteredMovies && filteredMovies.map((movie, index) => (
 
-                                setSelectedGenre={setSelectedGenre}
-                                setSelectedYear={setSelectedYear}
-                                setSelectedTag={setSelectedTag}
+                                <MovieCard
+                                    key={movie.id}
+                                    id={movie.id}
+                                    title={movie.title}
+                                    year={movie.year}
+                                    genre={movie.genre}
+                                    rating={movie.rating}
+                                    tags={movie.tags}
+                                    isFavorite={movie.favorite}
+                                    toggleFavorite={toggleFavorite}
 
-                            />
-                        ))}
+                                    setSelectedGenre={setSelectedGenre}
+                                    setSelectedYear={setSelectedYear}
+                                    setSelectedTag={setSelectedTag}
+
+                                />
+                            ))}
+                        </div>
 
                         {filteredMovies.length === 0 && (
                             <div className="empty-state">
@@ -210,13 +219,18 @@ function MiniMovieApp({ movies }) {
 
                     <div className="app-card-movie-favorite-movie-list">
                         {/* list of favoriate movies */}
-                        <h3>Favorite Movies</h3>
+                        <div>
+                            <h3>Favorite Movies</h3>
+                        </div>
                         <div className="favorite-grid">
                             {
                                 favoriteMovieList && favoriteMovieList.map((item, index) => (
                                     <FavoriteList key={item.id}
+                                        id={item.id}
                                         title={item.title}
                                         year={item.year}
+                                        toggleFavorite={toggleFavorite}
+
                                     />
                                 ))}
 

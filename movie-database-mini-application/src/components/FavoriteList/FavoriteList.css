@@ -1,111 +1,60 @@
-/* =========================
-   FAVORITE GRID
-========================= */
-
-.favorite-grid {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 1rem;
-}
-
-/* =========================
-   FAVORITE CARD
-========================= */
-
 .favorite-card {
+    
     display: inline-flex;
-    align-items: center;
 
+    align-items: center;
+    
     width: fit-content;
     max-width: 100%;
-
     padding: 0.5rem 0.8rem;
-
     border-radius: 15px;
-
     background: #eef2ff;
-
     transition: all 0.25s ease;
-
     cursor: pointer;
-}
+    margin: .5rem;
 
-/* Hover */
+}
 
 .favorite-card:hover {
     transform: translateY(-2px);
-
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
-
-/* =========================
-   HEART ICON
-========================= */
-
-.favorite-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-
-    border-radius: 10px;
-
-    color: rgb(100, 145, 243);
-
-    font-size: 1.1rem;
-
-    flex-shrink: 0;
-}
-
-/* =========================
-   CONTENT
-========================= */
 
 .favorite-content {
     display: flex;
     align-items: center;
-
     gap: 0.4rem;
-
     flex-wrap: wrap;
 }
 
-/* =========================
-   TITLE
-========================= */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    color: rgb(100, 145, 243);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
 
-.movie-title {
+.title {
     font-size: 0.95rem;
     font-weight: 700;
-
     color: #111827;
 }
 
-/* =========================
-   YEAR
-========================= */
-
-.movie-year {
+.year {
     font-size: 0.85rem;
-
     color: #9ca3af;
 }
 
-/* =========================
-   MOBILE
-========================= */
+
+
 
 @media (max-width: 768px) {
-
     .favorite-grid {
         gap: 0.7rem;
-    }
-
-    .favorite-card {
-        width: 100%;
     }
 }

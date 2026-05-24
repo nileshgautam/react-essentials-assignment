@@ -1,9 +1,9 @@
 .theme-btn-container {
     position: relative;
-    top: -20px;
-    right: 0;
+    text-align: end;
+    right: .95rem;
+    
 }
-
 .theme-btn {
     padding: 10px 18px;
     border: none;
