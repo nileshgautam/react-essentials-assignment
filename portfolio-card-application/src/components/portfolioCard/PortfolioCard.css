@@ -6,6 +6,7 @@
 }
 
 .portfolio-card {
+    width: 600px;
     margin: 50px auto;
     background: white;
     border-radius: 15px;
@@ -152,7 +153,6 @@
 .name-container h1 {
     font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: .5rem;
     color: #333;
 }
 
@@ -183,6 +183,7 @@
 @media(max-width:768px) {
 
     .portfolio-card {
+        width: auto;
         margin: 0 1rem;
     }
 
