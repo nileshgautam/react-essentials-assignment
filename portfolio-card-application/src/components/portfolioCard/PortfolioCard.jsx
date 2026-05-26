@@ -56,7 +56,7 @@ function PortfolioCard({ profiles }) {
                 {/* Skills section */}
 
                 <div className="skill-main">
-                    <h5>Skills</h5>
+                    <h4>Skills</h4>
                     <div className="skills-container">
                         {profile.skills.map((skill, index) => (
                             <span className="skill-tag" key={index}>{skill}</span>

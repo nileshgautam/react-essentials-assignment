@@ -196,4 +196,8 @@
         display: flex;
     }
 
+    .main .bio {
+        height: auto;
+    }
+
 }
