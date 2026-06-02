@@ -31,8 +31,17 @@
     color: white;
 }
 
+.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
 .dark .app-card {
     background: #5f5f5f;
+}
+
+.dark .genre {
+    color: #5f5f5f;
 }
 
 
@@ -140,6 +149,15 @@
     transition: 0.25s ease;
     outline: none;
     border: none;
+    background: none;
+}
+
+.dark .search-box input {
+    color: white;
+}
+
+.dark .search-box input::placeholder {
+    color: white;
 }
 
 .search-icon {
