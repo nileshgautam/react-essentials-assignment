@@ -43,13 +43,12 @@ function MoviesList(params) {
 
                     {tags?.map((tag, index) => (
                         <span
-                            className="minimovie-tag clickable"
+                            className={`minimovie-tag clickable ${index === 0 ? 'first-tag' : ''}`}
                             key={index}
                             onClick={() => setSelectedTag(tag)}
-                        >                            {tag}
+                        > {tag}
                         </span>
                     ))}
-
                 </div>
             </div>
 

@@ -105,14 +105,14 @@ function MiniMovieApp({ movies }) {
         setSortBy("title");
     }
     return (
-        <div className="card-container" >
+        <div className={`card-container ${darkMode ? "dark" : ""}`} >
 
             <ThemeToggle
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}
             />
 
-            <div className={`app-card ${darkMode ? "dark" : ""}`}>
+            <div className={`app-card`}>
                 <header className="app-card-header">
 
                     <div className="header-title">

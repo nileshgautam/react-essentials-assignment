@@ -1,9 +1,13 @@
 .theme-btn-container {
+    width: 83vw;
     position: relative;
     text-align: end;
-    right: .95rem;
-    
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin: auto;
+
 }
+
 .theme-btn {
     padding: 10px 18px;
     border: none;
@@ -11,11 +15,17 @@
     cursor: pointer;
     font-weight: 600;
     background: aliceblue;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     font-size: .95rem;
 }
 
 .theme-btn:hover {
     transform: translateY(-2px);
+}
+
+@media (max-width:768px) {
+    .theme-btn-container {
+        padding-top: 10px;
+    }
 }
