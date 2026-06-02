@@ -74,9 +74,7 @@ function MiniMovieApp({ movies }) {
     });
 
     const filteredMoviesCount = filteredMovies.length;
-    console.log('filteredMovies', filteredMovies);
-
-
+    
     const favoriteMovieList = moviesList.filter((movie) => (movie.favorite));
 
     const toggleFavorite = (id) => {
