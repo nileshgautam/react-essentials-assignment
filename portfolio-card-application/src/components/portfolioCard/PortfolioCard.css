@@ -1,13 +1,12 @@
 .card-container {
-    max-width: 80%;
     position: relative;
-    margin: 50px auto;
-    text-align: end;
+    margin: auto;
+    padding: 20px 1rem;
 }
 
 .portfolio-card {
     width: 600px;
-    margin: 50px auto;
+    margin: 1rem auto;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgb(0, 0, 0, 0.1);
@@ -22,7 +21,18 @@
 
 .dark {
     background: #1e1e1e;
-    color: white !important;
+    color: white;
+    min-height: 100vh;
+}
+
+.dark .portfolio-card {
+    background: #2d2d2d;
+    color: white;
+}
+
+body.dark {
+    background: #2d2d2d;
+    color: white;
 }
 
 .dark .bio,
@@ -34,7 +44,7 @@
 }
 
 .dark .portfolio-card-footer button,
-.portfolio-navigator {
+.dark .portfolio-navigator {
     background: #fff;
 }
 
@@ -92,6 +102,11 @@
     transform: translate(-2px);
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+.dark .skill-tag:hover {
+    background: #555;
+    color: white;
 }
 
 .portfolio-card:hover {
@@ -170,7 +185,7 @@
     }
 
     .name-container h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.2;
         margin: 0;
     }
@@ -184,11 +199,17 @@
 
     .portfolio-card {
         width: auto;
-        margin: 0 1rem;
+        padding: 1rem
     }
 
     .skill-main {
         min-height: 7rem;
+        font-size: smaller;
+
+    }
+
+    .skill-tag {
+        font-size: smaller;
 
     }
 
@@ -198,6 +219,7 @@
 
     .main .bio {
         height: auto;
+        font-size: small;
     }
 
 }

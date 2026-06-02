@@ -50,6 +50,21 @@
     margin: 0.5rem 0;
 }
 
+.portfolio-card-footer svg {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    color: #333;
+    fill: currentColor;
+}
+
+.portfolio-card-footer span {
+    color: #333;
+}
+
+
 @media(max-width:768px) {
 
     .portfolio-card-footer {
@@ -60,6 +75,7 @@
     .portfolio-card-footer button {
         width: 100%;
         margin-top: 0;
+        font-size: small;
     }
 
     .portfolio-navigator {
@@ -68,7 +84,9 @@
         margin: 0 0 .5rem;
     }
 
-    /* .portfolio-navigator button {
-        text-align: center;
-    } */
+    .portfolio-card-footer svg {
+        width: 12px;
+        height: 12px;
+    }
+
 }

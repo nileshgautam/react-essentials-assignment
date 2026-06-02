@@ -23,19 +23,19 @@ function PortfolioCard({ profiles }) {
     };
 
     return (
-        <div className="card-container">
+        <div className={`card-container ${darkMode ? "dark" : ""}`}>
 
             <ThemeToggle
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}
             />
 
-            <div className={`portfolio-card ${darkMode ? "dark" : ""}`}>
+            <div className={`portfolio-card`}>
 
                 <header className="portfolio-card-header">
 
                     <div className="avatar-container">
-                        <img src={profile.image} alt={name} />
+                        <img src={profile.image} alt={profile.name} />
                     </div>
 
                     <div className="name-container">
@@ -65,7 +65,7 @@ function PortfolioCard({ profiles }) {
                 </div>
 
                 {/* Action  section*/}
-                
+
                 <ActionButton
                     likes={likes}
                     setLikes={setLikes}

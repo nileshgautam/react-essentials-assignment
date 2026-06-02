@@ -11,9 +11,11 @@ function ThemeToggle({ darkMode, setDarkMode }) {
                 onClick={() => setDarkMode(!darkMode)}
             >
                 {darkMode ? (
-                    <FaMoon />
-                ) : (
                     <FaSun />
+
+                ) : (
+                    <FaMoon />
+
                 )}
                 <span> Toggle Theme</span> </button>
         </div>
