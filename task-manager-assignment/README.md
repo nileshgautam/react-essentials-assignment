@@ -42,11 +42,14 @@ This project is a Task Manager application built using React, Context API, and u
 ## Installation
 
 ```bash
-git clone <repository-url>
-cd react-essentials-assignment
+git clone https://github.com/nileshgautam/react-essentials-assignment.git
+cd task-manager-assignment
 npm install
 npm run dev
 ```
+
+## Live Demo
+You can access the live demo of the Task Manager application [here](https://react-taskmanager-pi.vercel.app/).
 
 ## Screenshots
 ![Task Manager Home Page](/screenshots/Screenshot-1.png)
