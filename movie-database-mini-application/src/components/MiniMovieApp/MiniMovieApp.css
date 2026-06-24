@@ -427,9 +427,9 @@
     }
 
     .rest-btn {
-        width: auto;
         padding: 0.9rem;
         font-size: 12px !important;
+        width: auto;
     }
 }
 
@@ -453,7 +453,7 @@
 
 .rest-btn {
     flex-shrink: 0; /* prevents button from shrinking */
-    width: 90px;
+    width: 110px;
 }
 
 
