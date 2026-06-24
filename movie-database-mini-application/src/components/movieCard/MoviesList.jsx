@@ -34,8 +34,9 @@ function MoviesList(params) {
                         className="genre clickable"
                         onClick={() => setSelectedGenre(genre)}
                     >
-                        • {genre}
-                    </span>                </div>
+                        {genre}
+                    </span>
+                </div>
 
                 <div className="minimovie-info-row">
 

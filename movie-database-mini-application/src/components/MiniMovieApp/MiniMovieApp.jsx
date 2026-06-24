@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./MiniMovieApp.css";
 import { FaRedo, FaTimes, FaSearch } from "react-icons/fa";
 
@@ -23,6 +23,8 @@ function MiniMovieApp({ movies }) {
     const [searchTerm, setSearchTerm] = useState('');
     // State for sort by
     const [sortBy, setSortBy] = useState('title');
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
 
     const searchTerms = searchTerm
         .split(",")
@@ -74,7 +76,7 @@ function MiniMovieApp({ movies }) {
     });
 
     const filteredMoviesCount = filteredMovies.length;
-    
+
     const favoriteMovieList = moviesList.filter((movie) => (movie.favorite));
 
     const toggleFavorite = (id) => {
@@ -101,7 +103,20 @@ function MiniMovieApp({ movies }) {
         setSelectedTag("");
         setSearchTerm("");
         setSortBy("title");
+        setMoviesList(movies);
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerHeight <= 768);
+        }
+        window.addEventListener('resize', handleResize);
+
+        return window.removeEventListener('resize', handleResize);
+
+    }, []);
+
+
     return (
         <div className={`card-container ${darkMode ? "dark" : ""}`} >
 
@@ -121,28 +136,35 @@ function MiniMovieApp({ movies }) {
 
                 <div className="app-search-bar">
                     <div className="search-box">
-                        <FaSearch className="search-icon" />
+                        <FaSearch className="prepend-icon" />
+
                         <input
                             type="text"
-                            placeholder='Search movies (e.g. "Interstellar","Star")'
+                            placeholder={
+                                isMobile
+                                    ? "Search movies..."
+                                    : 'Search movies (e.g. "Interstellar","Star")'
+                            }
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
 
-
+                        {searchTerm && (
+                            <FaTimes
+                                className="append-icon"
+                                onClick={() => setSearchTerm("")}
+                            />
+                        )}
                     </div>
-                    {/* Clear search all button */}
-                    <button className="clear-btn"
-                        onClick={() => setSearchTerm('')}
-                    ><FaTimes />
-                    </button>
+            
 
                     {/* reset button */}
                     <button className="rest-btn"
                         onClick={restFilter}
                     > <FaRedo /> Reset</button>
-                    {/* here result for search term */}
+
                 </div>
+                {/* here result for search term */}
                 {searchTerm.trim() && (
                     <p>
                         {filteredMoviesCount} result
@@ -205,13 +227,15 @@ function MiniMovieApp({ movies }) {
 
                                 />
                             ))}
+
+                            {filteredMovies.length === 0 && (
+                                <div className="empty-state">
+                                    No movies found
+                                </div>
+                            )}
                         </div>
 
-                        {filteredMovies.length === 0 && (
-                            <div className="empty-state">
-                                No movies found
-                            </div>
-                        )}
+
 
                     </div>
 

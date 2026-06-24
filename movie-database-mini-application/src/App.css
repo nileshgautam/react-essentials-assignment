@@ -3,3 +3,34 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Dark */
+.dark .minimovie-card {
+    background: #334155;
+    border: 1px solid #475569;
+    color: #f8fafc;
+}
+
+.dark .title,
+.dark .minimovie-tag {
+    color: #f8fafc;
+}
+
+.dark .first-tag {
+    background: #f8fafc;
+    color: #334155;
+}
+
+.dark .right button {
+    background: #334155;
+    color: #f8fafc;
+    border: 1px solid #475569;
+
+}
+
+.dark .right button:hover,
+.dark .minimovie-tag:hover {
+    background: #fff;
+    color: #334155;
+    cursor: pointer;
+}

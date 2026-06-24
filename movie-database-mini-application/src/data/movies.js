@@ -14,7 +14,7 @@ const movies = [
     tags: ["Space", "Adventure", "Time", "Survival"],
     description:
       "A team of astronauts travels through a wormhole to save humanity.",
-    favorite: true,
+    favorite: false
   },
   {
     id: 2,
@@ -60,7 +60,7 @@ const movies = [
     image: "/images/avatar.jpg",
     tags: ["Alien", "Adventure", "Sci-Fi"],
     description: "A marine explores the alien world of Pandora.",
-    favorite: true,
+    favorite: false
   },
   {
     id: 5,
@@ -108,7 +108,7 @@ const movies = [
     tags: ["College", "Friendship", "Drama"],
     description:
       "Three engineering students discover the true meaning of success.",
-    favorite: true,
+    favorite: false
   },
   {
     id: 8,
@@ -138,7 +138,7 @@ const movies = [
     image: "/images/znmd.jpg",
     tags: ["Travel", "Friendship", "Life"],
     description: "Three friends rediscover life during a road trip in Spain.",
-    favorite: true,
+    favorite: false
   },
   {
     id: 10,
@@ -185,7 +185,7 @@ const movies = [
     tags: ["Travel", "Women", "Self Discovery"],
     description:
       "A woman goes on her honeymoon alone after her wedding is canceled.",
-    favorite: true,
+    favorite: false
   },
 
   // More Movies
@@ -234,7 +234,7 @@ const movies = [
     tags: ["Crime", "Action", "Forest"],
     description:
       "A laborer rises through the ranks of a red sandalwood smuggling syndicate.",
-    favorite: true,
+    favorite: false
   },
 ];
 

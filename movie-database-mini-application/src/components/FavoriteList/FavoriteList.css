@@ -1,9 +1,9 @@
 .favorite-card {
-    
+
     display: inline-flex;
 
     align-items: center;
-    
+
     width: fit-content;
     max-width: 100%;
     padding: 0.5rem 0.8rem;
@@ -57,4 +57,11 @@
     .favorite-grid {
         gap: 0.7rem;
     }
+}
+
+/* Dark */
+.dark .favorite-card {
+    background: #334155;
+    border: 1px solid #475569;
+    color: #f8fafc;
 }

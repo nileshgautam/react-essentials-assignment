@@ -76,7 +76,7 @@
 }
 
 .minimovie-tag:hover {
-    background: #6366f1;
+    background: #ffb703;
     color: white;
 }
 
@@ -91,13 +91,14 @@
 }
 
 .right .favorited {
-    background: #e6004c;
+    background: #ffb703;
     color: #fff;
 }
 
 .right button:hover {
     transform: scale(1.03);
-    background: #e6004c;
+    background: #ffb703;
+    color: #fff;
 }
 
 
@@ -113,10 +114,10 @@
         gap: 1rem;
     }
 
-    .right,
+    /* .right,
     .right button {
         width: 100%;
-    }
+    } */
 
     .title {
         font-size: 1.25rem;
@@ -126,9 +127,21 @@
 .clickable {
     cursor: pointer;
     transition: 0.2s ease;
+    font-size: small;
 }
 
 .clickable:hover {
     transform: scale(1.05);
     opacity: 0.85;
+}
+
+.dark .right button:hover {
+    transform: scale(1.03);
+    background: #ffb703;
+    color: #fff;
+}
+
+.dark .right .favorited {
+    background: #ffb703;
+    color: #fff;
 }
