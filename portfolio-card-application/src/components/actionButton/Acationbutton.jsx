@@ -16,45 +16,51 @@ function ActionButton({
 }) {
 
     return (
+
         <div className="portfolio-card-footer">
 
-            <button onClick={toggleTheme}>
-                {darkMode ? (
-                    <>
-                        <FaMoon /> <span> Light</span>
-                    </>
+            <div className="icon-action">
+
+                <button onClick={toggleTheme}>
+                    {darkMode ? (
+                        <>
+                            <FaMoon /> <span> Light</span>
+                        </>
 
 
-                ) : (
+                    ) : (
 
-                    <>
-                        <FaSun /> <span> Dark</span>
-                    </>
-                )}
-            </button>
+                        <>
+                            <FaSun /> <span> Dark</span>
+                        </>
+                    )}
+                </button>
 
-            <div className="portfolio-navigator">
+                <div className="portfolio-navigator">
 
-                <span onClick={prevProfile}> <FaAngleLeft /></span>
-                <span onClick={nextProfile}> <FaAngleRight /> </span>
-                <span className="navigator-span">
-                    {currentProfile + 1} / {totalProfiles}
-                </span>
+                    <span onClick={prevProfile}> <FaAngleLeft /></span>
+                    <span onClick={nextProfile}> <FaAngleRight /> </span>
+                    <span className="navigator-span">
+                        {currentProfile + 1} / {totalProfiles}
+                    </span>
+                </div>
+
+                <button onClick={() => setLikes(likes + 1)}>
+                    <FaHeart />
+                    <span> {likes}</span>
+                </button>
+
             </div>
-
-            <button onClick={() => setLikes(likes + 1)}>
-                <FaHeart />
-                <span> {likes}</span>
-            </button>
-
-            <button
-                className="contact-btn"
-                onClick={() => alert("Contact feature coming soon!")}
-            >
-                Contact
-            </button>
-
+            <div className="contact-action">
+                <button
+                    className="contact-btn"
+                    onClick={() => alert("Contact feature coming soon!")}
+                >
+                    Contact
+                </button>
+            </div>
         </div >
+
     );
 }
 

@@ -11,6 +11,15 @@
 .contact-btn {
     background: #4f46e5 !important;
     color: white;
+    width: auto;
+    width: 100%;
+    margin-top: 0;
+    font-size: 12px;
+    padding: 8px 10px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 12px;
+
 }
 
 .theme-shitch button {
@@ -25,7 +34,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1.5rem .25rem 0 .25rem;
+    /* margin: 1.5rem .25rem 0 .25rem; */
+    gap: 10px;
 }
 
 .navigator-span {
@@ -36,8 +46,8 @@
     border-radius: 7px;
     color: #333;
     text-align: center;
-    padding: .5rem 0;
-    margin: .5rem 0;
+    padding: 3px 8px;
+    margin: .4rem 0;
 }
 
 .portfolio-navigator span {
@@ -64,24 +74,29 @@
     color: #333;
 }
 
+.icon-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
 
     .portfolio-card-footer {
-        flex-direction: column;
-        align-items: stretch;
+        gap: 6px;
+    }
+
+    .icon-action {
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* optional */
     }
 
     .portfolio-card-footer button {
-        width: 100%;
-        margin-top: 0;
-        font-size: small;
-    }
-
-    .portfolio-navigator {
-        width: 100%;
-        text-align: center;
-        margin: 0 0 .5rem;
+        font-size: 14px;
+        padding: 6px 8px;
+        white-space: nowrap;
     }
 
     .portfolio-card-footer svg {
@@ -89,4 +104,7 @@
         height: 12px;
     }
 
+    .portfolio-navigator span {
+        padding: 2px 4px;
+    }
 }
