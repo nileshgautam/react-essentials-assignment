@@ -1,6 +1,6 @@
 # React Essentials - Portfolio $ Movie Explorer mini projects
 
-This repository contains two react mini projects created as part of the React Essentials Assignment by TuteDude.
+This repository contains react mini projects created as part of the React Essentials Assignment by TuteDude.
 
 ## Live Demo Links
 
@@ -11,6 +11,10 @@ Live URL: https://portfolio-app-nilesh.vercel.app/
 ### Assignment 2 — Movie Database Mini Application
 
 Live URL: https://movies-database-nilesh.vercel.app/
+
+### Assignment 3 — Task Manager Application
+
+Live URL: https://task-manager-ivory-xi-78.vercel.app/
 
 ---
 
@@ -46,6 +50,12 @@ Repository URL: https://github.com/your-username/react-essentials-assignment
 - Conditional rendering
 - Favourite movie toggle
 - Favourite movies section
+
+### Task Manager Application
+
+- Task CRUD operations
+- Task completion toggle
+- Task filtering
 
 ---
 
