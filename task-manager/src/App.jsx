@@ -1,29 +1,30 @@
 import './App.css';
-import TaskInput from './components/TaskInput';
-import TaskList from './components/TaskList';
-import TaskSummary from './components/TaskSummary';
+import TaskForm from './componets/TaskForm';
 import { TaskProvider } from './context/TaskContext';
+import TaskList from './componets/TaskList';
+import FilterControls from './componets/FilterControls';
 
 function App() {
   return (
     <TaskProvider>
-      <div className="app-container">
+      <div className="App">
         <header className='app-header'>
           <h1>Task Manager</h1>
+          <p>Built with React Context API & useReducer</p>
         </header>
         <main className='app-main'>
-          <div className="">
-            <TaskInput />
+          <div className="sidebar">
+            <TaskForm />
           </div>
           <div className="content">
-            <TaskSummary />
+            <FilterControls />
             <TaskList />
           </div>
         </main>
       </div>
     </TaskProvider>
   )
+
 }
 
 export default App;
-
