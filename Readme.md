@@ -1,6 +1,6 @@
 # React Essentials - Portfolio $ Movie Explorer mini projects
 
-This repository contains react mini projects created as part of the React Essentials Assignment by TuteDude.
+This repository contains 4 react mini projects created as part of the React Essentials Assignment by TuteDude.
 
 ## Live Demo Links
 
@@ -15,6 +15,10 @@ Live URL: https://movies-database-nilesh.vercel.app/
 ### Assignment 3 — Task Manager Application
 
 Live URL: https://task-manager-ivory-xi-78.vercel.app/
+
+### Assignment 4 — Weather dashboard Application
+
+Live URL: https://weather-dashboard-phi-sooty.vercel.app/
 
 ---
 
@@ -56,6 +60,12 @@ Repository URL: https://github.com/your-username/react-essentials-assignment
 - Task CRUD operations
 - Task completion toggle
 - Task filtering
+
+### Weather Dashboard Application
+ - Weather data fetching from API
+ - Dynamic weather display based on user input
+ - Responsive design for different screen sizes
+ - Error handling for invalid city names
 
 ---
 
