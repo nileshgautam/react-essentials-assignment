@@ -76,7 +76,7 @@ Repository URL: https://github.com/your-username/react-essentials-assignment
  - Student Entry Form
  - Grade Calculation
  - Student List Display
- - CRUD Operations (Add, Edit, Delete)
+ - CRUD Operations (Add, View Edit, Delete)
  - Filtering and Sorting of Students
  - Validation for Input Fields
  - Notify the user after eact CRUD action.
