@@ -20,6 +20,10 @@ Live URL: https://task-manager-ivory-xi-78.vercel.app/
 
 Live URL: https://weather-dashboard-phi-sooty.vercel.app/
 
+### Assignment 5 — Student Grade Tracker Application
+Live URL: https://react-essentials-assignment-8nti.vercel.app
+
+
 ---
 
 ## GitHub Repository
@@ -66,6 +70,16 @@ Repository URL: https://github.com/your-username/react-essentials-assignment
  - Dynamic weather display based on user input
  - Responsive design for different screen sizes
  - Error handling for invalid city names
+
+ ### Student Grade Tracker Application
+ - Created Application using Class components.
+ - Student Entry Form
+ - Grade Calculation
+ - Student List Display
+ - CRUD Operations (Add, Edit, Delete)
+ - Filtering and Sorting of Students
+ - Validation for Input Fields
+ - Notify the user after eact CRUD action.
 
 ---
 
