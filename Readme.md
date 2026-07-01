@@ -1,92 +1,132 @@
-# React Essentials Assinments 
+# React Essentials Assignments
 
-This repository contains 5 react mini projects created as part of the React Essentials Assignment by TuteDude.
+This repository contains five React mini projects developed as part of the **React Essentials Assignment** by **TuteDude**. Each project demonstrates core React concepts such as components, state management, props, event handling, conditional rendering, CRUD operations, API integration, and responsive UI development.
 
-## Live Demo Links
+## 🚀 Live Demo Links
 
 ### Assignment 1 — Portfolio Card Application
 
-Live URL: https://portfolio-app-nilesh.vercel.app/
+**Live Demo:** https://portfolio-app-nilesh.vercel.app/
 
-### Assignment 2 — Movie Database Mini Application
+### Assignment 2 — Movie Database Application
 
-Live URL: https://movies-database-nilesh.vercel.app/
+**Live Demo:** https://movies-database-nilesh.vercel.app/
 
 ### Assignment 3 — Task Manager Application
 
-Live URL: https://task-manager-ivory-xi-78.vercel.app/
+**Live Demo:** https://task-manager-ivory-xi-78.vercel.app/
 
-### Assignment 4 — Weather dashboard Application
+### Assignment 4 — Weather Dashboard Application
 
-Live URL: https://weather-dashboard-phi-sooty.vercel.app/
+**Live Demo:** https://weather-dashboard-phi-sooty.vercel.app/
 
 ### Assignment 5 — Student Grade Tracker Application
-Live URL: https://react-essentials-assignment-8nti.vercel.app
 
-
----
-
-## GitHub Repository
-
-Repository URL: https://github.com/your-username/react-essentials-assignment
+**Live Demo:** https://react-essentials-assignment-8nti.vercel.app/
 
 ---
 
-## Technologies Used
+## 📂 GitHub Repository
 
-- React.js
-- JavaScript (ES6+)
-- CSS3
-- Vite
+**Repository:** https://github.com/your-username/react-essentials-assignment
 
----
-
-## Features Implemented
-
-### Portfolio Card Application
-
-- Component-based architecture
-- Dynamic props rendering
-- Theme toggle
-- Profile image switching
-- Like counter using React state
-
-### Movie Database Application
-
-- Movie search functionality
-- Dynamic filtering
-- Conditional rendering
-- Favourite movie toggle
-- Favourite movies section
-
-### Task Manager Application
-
-- Task CRUD operations
--- Action buttons for each task
-    -- View : View task details always in a modal and it will always be available for all tasks.
-    -- Edit : Edit task details from the list and user can not edit task if it is marked as completed.
-    -- Delete : Delete task from the list and user can not delete task if it is marked as completed.
-- Task completion toggle
-- Task filtering
-
-### Weather Dashboard Application
- - Weather data fetching from API
- - Dynamic weather display based on user input
- - Responsive design for different screen sizes
- - Error handling for invalid city names
-
- ### Student Grade Tracker Application
- - Created Application using Class components.
- - Student Entry Form
- - Grade Calculation
- - Student List Display
- - CRUD Operations (Add, View Edit, Delete)
- - Filtering and Sorting of Students
- - Validation for Input Fields
- - Notify the user after eact CRUD action.
+> Replace `your-username` with your actual GitHub username.
 
 ---
 
-## Developed By
+## 🛠️ Technologies Used
 
-Nilesh Kumar Gautam
+* React.js
+* JavaScript (ES6+)
+* CSS3
+* Vite
+
+---
+
+# 📋 Features
+
+## 1. Portfolio Card Application
+
+* Component-based architecture
+* Dynamic props rendering
+* Theme toggle (Light/Dark Mode)
+* Profile image switching
+* Like counter using React state
+
+---
+
+## 2. Movie Database Application
+
+* Search movies by title
+* Dynamic filtering
+* Conditional rendering
+* Favourite movie toggle
+* Favourite movies section
+
+---
+
+## 3. Task Manager Application
+
+* Complete CRUD operations
+* Task completion status toggle
+* Search and filter tasks
+* Priority management (Low, Medium, High)
+* Responsive user interface
+* Form validation
+* Success and error notifications using SweetAlert2
+
+### Task Actions
+
+* **View** – View task details in a modal.
+* **Edit** – Edit task details (disabled for completed tasks).
+* **Delete** – Delete tasks with a confirmation dialog (disabled for completed tasks).
+* **Mark as Complete / Mark as Pending** – Toggle task completion status.
+
+---
+
+## 4. Weather Dashboard Application
+
+* Fetch real-time weather data using an API
+* Search weather by city
+* Display current weather details
+* Responsive UI
+* Error handling for invalid city names
+* Loading indicator during API requests
+
+---
+
+## 5. Student Grade Tracker Application
+
+* Built using React Class Components
+* Student entry form
+* Automatic grade calculation
+* Student list management
+* Complete CRUD operations
+* View student details
+* Filter and sort students
+* Input validation
+* Success notifications after each CRUD operation
+
+---
+
+## 📚 React Concepts Covered
+
+* Functional Components
+* Class Components
+* Props
+* State Management
+* Event Handling
+* Conditional Rendering
+* Forms and Validation
+* Lists and Keys
+* CRUD Operations
+* React Context API
+* Custom Components
+* API Integration
+* Responsive Design
+
+---
+
+## 👨‍💻 Developed By
+
+**Nilesh Kumar Gautam**
