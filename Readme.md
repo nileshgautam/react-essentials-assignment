@@ -1,6 +1,6 @@
-# React Essentials - Portfolio $ Movie Explorer mini projects
+# React Essentials Assinments 
 
-This repository contains 4 react mini projects created as part of the React Essentials Assignment by TuteDude.
+This repository contains 5 react mini projects created as part of the React Essentials Assignment by TuteDude.
 
 ## Live Demo Links
 
