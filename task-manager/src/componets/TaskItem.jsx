@@ -77,6 +77,27 @@ function TaskItem({ task }) {
         }
     }
 
+    const handleDelete = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#667eea',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteTask(task.id);
+                Swal.fire(
+                    'Deleted!',
+                    'Your task has been deleted.',
+                    'success'
+                )
+            }
+        })
+    }
+
     if (isEditing) {
         return (
             <div className="task-titem editing">
@@ -142,43 +163,52 @@ function TaskItem({ task }) {
                     <small>Created : {new Date(task.createdAt).toLocaleDateString()}</small>
                 </div>
 
-                <div className="task-action">
-                    <button onClick={() => setShowModal(true)}>
-                        View
-                    </button>
-                    <button onClick={() => toggleTask(task.id)}
-                        className={`toggle-btn ${task.completed ? 'completed' : ''}`}
-                    >{task.completed ? 'Completed' : 'Pending'}</button>
-                    <button className="editbtn" onClick={() => setIsEditing(true)}
-                        disabled={task.completed}
-                    >Edit</button>
-                    <button className="deletebtn" onClick={() => deleteTask(task.id)}
-                    >Delete</button>
-                </div>
-
-                <Modal isOpen={showModal}
-                    onClose={() => setShowModal(false)}>
-                    <h2>{task.title}</h2>
-                    <p><strong>Description : </strong></p>
-                    <p>
-                        {task.description || "No description available"}
-                    </p>
-                    <p>
-                        <strong>Priority:</strong> {task.priority}
-                    </p>
-                    <p>
-                        <strong>Status:</strong>{" "}
-                        {task.completed ? "Completed" : "Pending"}
-                    </p>
-                    <p>
-                        <strong>Created:</strong>{" "}
-                        {new Date(task.createdAt).toLocaleDateString()}
-                    </p>
-                </Modal>
-
             </div>
 
+            <div className="task-action">
+                <button onClick={() => setShowModal(true)}
+                    title="View Task Details"
+                >
+                    View
+                </button>
+                <button onClick={() => toggleTask(task.id)}
+                    className={`toggle-btn ${task.completed ? 'completed' : ''}`}
+                    title={task.completed ? "Mark as Pending" : "Mark as Complete"}
+                >
+                    {task.completed ? 'Mark as Pending' : 'Mark as Complete'}
+                </button>
+                <button className="editbtn" onClick={() => setIsEditing(true)}
+                    disabled={task.completed}
+                    title={task.completed ? "Cannot edit completed task" : "Edit task"}
+                >Edit</button>
+                <button className="deletebtn" disabled={task.completed} title={task.completed ? "Cannot delete completed task" : "Delete task"} onClick={handleDelete}>
+                    Delete
+                </button>
+            </div>
+
+            <Modal isOpen={showModal}
+                onClose={() => setShowModal(false)}>
+                <h2>{task.title}</h2>
+                <p><strong>Description : </strong></p>
+                <p>
+                    {task.description || "No description available"}
+                </p>
+                <p>
+                    <strong>Priority:</strong> {task.priority}
+                </p>
+                <p>
+                    <strong>Status:</strong>{" "}
+                    {task.completed ? "Completed" : "Pending"}
+                </p>
+                <p>
+                    <strong>Created:</strong>{" "}
+                    {new Date(task.createdAt).toLocaleDateString()}
+                </p>
+            </Modal>
+
         </div>
+
+
     )
 
 }
