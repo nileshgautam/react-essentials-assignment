@@ -62,6 +62,10 @@ Repository URL: https://github.com/your-username/react-essentials-assignment
 ### Task Manager Application
 
 - Task CRUD operations
+-- Action buttons for each task
+    --View : View task details always in a modal and it will always be available for all tasks.
+    --Edit : Edit task details from the list and user can not edit task if it is marked as completed.
+    --Delete : Delete task from the list and user can not delete task if it is marked as completed.
 - Task completion toggle
 - Task filtering
 

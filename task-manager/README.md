@@ -1,16 +1,82 @@
-# React + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based task manager built with Vite. This app lets users create, edit, filter, and manage tasks in a clean interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add new tasks with a title and description
+- Edit and delete existing tasks
+- Filter tasks by status or category
+- Modal form interface for task creation and updates
+- Alert notifications powered by `sweetalert2`
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- SweetAlert2
+- ESLint
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/` - application source code
+  - `App.jsx` - main app component
+  - `main.jsx` - app entry point
+  - `assets/` - static assets
+  - `componets/` - UI components
+    - `FilterControls.jsx`
+    - `Modal.jsx`
+    - `TaskForm.jsx`
+    - `TaskItem.jsx`
+    - `TaskList.jsx`
+  - `context/TaskContext.jsx` - task state management
+  - `hooks/` - custom hooks
+  - `utils/` - utility functions
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ or compatible version
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open the local development URL shown in the terminal.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Notes
+
+- The app is configured as a Vite project using the `module` package type.
+- Task UI and behavior are handled through React component state and context.
+
+## License
+
+This project is provided as-is.
