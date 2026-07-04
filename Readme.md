@@ -26,7 +26,7 @@ This repository contains five React mini projects developed as part of the **Rea
 
 ### Assignment 6 —  Expense Tracker Application
 
-**Live Demo:** https://react-essentials-assignment-8nti.vercel.app/
+**Live Demo:** https://expense-tracker-sigma-peach-53.vercel.app/
 
 
 
