@@ -24,14 +24,17 @@ This repository contains five React mini projects developed as part of the **Rea
 
 **Live Demo:** https://react-essentials-assignment-8nti.vercel.app/
 
+### Assignment 6 —  Expense Tracker Application
+
+**Live Demo:** https://react-essentials-assignment-8nti.vercel.app/
+
+
+
 ---
 
 ## 📂 GitHub Repository
 
-**Repository:** https://github.com/your-username/react-essentials-assignment
-
-> Replace `your-username` with your actual GitHub username.
-
+**Repository:** https://github.com/nileshgautam/react-essentials-assignment.git
 ---
 
 ## 🛠️ Technologies Used
@@ -109,6 +112,14 @@ This repository contains five React mini projects developed as part of the **Rea
 
 ---
 
+## 6. Expense Tracker Application
+
+* Add expenses with description, amount, and category
+* Filter by category and search by description
+* Filter expenses by minimum and maximum amount
+* Display total expense summary and filtered totals
+* Persist expense data in browser localStorage
+
 ## 📚 React Concepts Covered
 
 * Functional Components
@@ -120,6 +131,8 @@ This repository contains five React mini projects developed as part of the **Rea
 * Forms and Validation
 * Lists and Keys
 * CRUD Operations
+* Custom Hooks
+* LocalStorage persistence
 * React Context API
 * Custom Components
 * API Integration
